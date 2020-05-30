@@ -1,2 +1,3 @@
 # test-webpack-project
-install test webpack
+---
+Настройка webpack.config

@@ -1,0 +1,14 @@
+$body-color: black;
+$main-color: tan;
+
+body {
+    background-color: $body-color;
+
+    h1 {
+        font-family: monospace;
+        font-size: 9rem;
+        color: $main-color;
+        text-align: center;
+        border-top: 1rem dashed $main-color;
+    }
+}

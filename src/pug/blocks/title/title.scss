@@ -1,0 +1,18 @@
+.title-page {
+    width: 250px;
+    margin: 20px auto;
+    font-family: monospace;
+    font-size: 6em;
+    color: $main-color;
+    text-align: center;
+    border-top: 1px dashed $main-color;
+    transition: 0.3s linear;
+    box-sizing: border-box;
+    cursor: pointer;
+    
+}
+.active {
+    color: tomato;
+    border-color: tomato;
+    border-style: solid;
+}

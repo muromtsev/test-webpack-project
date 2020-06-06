@@ -1,0 +1,28 @@
+nav {
+    max-width: 1920px;
+    width: 100%;
+    
+    .menu {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        font-family: 'Arial', 'sans-serif';
+        &__item {
+            padding: 0 20px;
+
+            &-link {
+                position: relative;
+                display: block;
+                font-size: 30px;
+                text-decoration: none;
+                text-transform: uppercase;
+                color: $color;
+                transition: .3s linear;
+
+                &:hover {
+                    color: black;
+                }
+            }
+        }
+    }
+}

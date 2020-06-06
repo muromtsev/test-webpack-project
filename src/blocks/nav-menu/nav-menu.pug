@@ -1,0 +1,6 @@
+mixin nav-menu({ menuElements=[], }={})
+    nav
+        ul.menu
+            each item in menuElements
+                li.menu__item
+                    a.menu__item-link(href=item.href)= item.textLink

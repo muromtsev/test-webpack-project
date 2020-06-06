@@ -1,18 +1,17 @@
 .title-page {
-    width: 250px;
+    width: 40%;
     margin: 20px auto;
+    font-size: 2em;
     font-family: monospace;
-    font-size: 6em;
-    color: $main-color;
     text-align: center;
-    border-top: 1px dashed $main-color;
+    border-top: 1px dashed $color;
     transition: 0.3s linear;
     box-sizing: border-box;
     cursor: pointer;
     
 }
 .active {
-    color: tomato;
-    border-color: tomato;
+    color: tan;
+    border-color: tan;
     border-style: solid;
 }

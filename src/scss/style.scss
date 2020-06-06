@@ -1,12 +1,5 @@
-$famaly-base: 'monospace';
-$body-color: black;
-$main-color: tan;
-$font-base: 14px;
-
 body {
     font-size: $font-base;
-    font-family: $famaly-base;
-    background-color: $body-color;
+    color: $color;
+    background-color: $main-color;
 }
-
-@import '../pug/blocks/title/title.scss';

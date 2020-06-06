@@ -10,7 +10,7 @@ module.exports = (env, options) => {
         dist: path.join(__dirname, './dist'),
     };
 
-    const PAGES_DIR = `${PATHS.src}/pug/`;
+    const PAGES_DIR = `${PATHS.src}`;
     const production = options.mode === 'production';
     const publicDir = production ? './' : '/';
 
@@ -55,8 +55,15 @@ module.exports = (env, options) => {
                     test: /\.(sa|sc|c)ss$/,
                     use: [
                         {loader: MiniCssExtractPlugin.loader },
+                        // 'style-loader',
                         'css-loader',
-                        'sass-loader',    
+                        'sass-loader',
+                        {
+                            loader: 'sass-resources-loader',
+                            options: {
+                                resources: `${PAGES_DIR}/scss/_var.scss`,
+                            },
+                        },
                     ],
                 },
             ],
@@ -74,6 +81,18 @@ module.exports = (env, options) => {
             new HtmlWebpackPlugin({
                 template: `${PAGES_DIR}/index.pug`,
                 filename: './index.html',
+            }),
+            new HtmlWebpackPlugin({
+                template: `${PAGES_DIR}/pages/page1/page1.pug`,
+                filename: './page1.html',
+            }),
+            new HtmlWebpackPlugin({
+                template: `${PAGES_DIR}/pages/page2/page2.pug`,
+                filename: './page2.html',
+            }),
+            new HtmlWebpackPlugin({
+                template: `${PAGES_DIR}/pages/page3/page3.pug`,
+                filename: './page3.html',
             }),
         ],
     }

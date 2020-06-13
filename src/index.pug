@@ -11,17 +11,8 @@ html(lang='en')
         meta(name="description" content=description)
         title=pageTitle
         meta(name='viewport' content='width=device-width, initial-scale=1.0')
-    body  
-        include ./blocks/nav-menu/nav-menu.pug
-        include ./blocks/title/title.pug
-        +nav-menu({
-            menuElements: [
-                {textLink: 'HOME', href: './index.html'},
-                {textLink: 'page 1', href: './page1.html'},
-                {textLink: 'page 2', href: './page2.html'},
-                {textLink: 'page 3', href: './page3.html'},
-            ]
-        })
+    body        
 
         block content
-            +title-page({ text: 'tag: h1, page: HOME'})
+            include ./blocks/d3/diagramm.pug
+            +d3-diagramm

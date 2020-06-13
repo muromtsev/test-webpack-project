@@ -44,18 +44,10 @@ module.exports = (env, options) => {
                     test: /\.pug$/,
                     loader: 'pug-loader',
                 },
-                // {
-                //     test: /\.css$/,
-                //     use: [
-                //         {loader: MiniCssExtractPlugin.loader },
-                //         'css-loader',
-                //     ],
-                // },
                 {
                     test: /\.(sa|sc|c)ss$/,
                     use: [
                         {loader: MiniCssExtractPlugin.loader },
-                        // 'style-loader',
                         'css-loader',
                         'sass-loader',
                         {
@@ -81,18 +73,6 @@ module.exports = (env, options) => {
             new HtmlWebpackPlugin({
                 template: `${PAGES_DIR}/index.pug`,
                 filename: './index.html',
-            }),
-            new HtmlWebpackPlugin({
-                template: `${PAGES_DIR}/pages/page1/page1.pug`,
-                filename: './page1.html',
-            }),
-            new HtmlWebpackPlugin({
-                template: `${PAGES_DIR}/pages/page2/page2.pug`,
-                filename: './page2.html',
-            }),
-            new HtmlWebpackPlugin({
-                template: `${PAGES_DIR}/pages/page3/page3.pug`,
-                filename: './page3.html',
             }),
         ],
     }
